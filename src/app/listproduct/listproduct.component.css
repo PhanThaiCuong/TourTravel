@@ -1,0 +1,194 @@
+.header-banner{
+    width: 80%;
+    height: 5vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+    padding-top: 20px;
+  }
+  .header-content-list-banner{
+    width: 80%;
+    height: 50vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .content-list-banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #000; */
+  }
+  .content-list-banner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/image/bannerlist1.jpg')no-repeat center center/cover;
+  border-radius: 10px;
+  z-index: -1;
+  }
+   .content-list-banner .cont_bx {
+    height: auto;
+    color: #fff;
+    padding: 30px;
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  }
+  
+   .content-list-banner .cont_bx h1 {
+    text-align: center; /* Căn giữa text theo chiều ngang */
+    color: rgb(255, 255, 255);
+  margin-top: 150px;
+  }
+  
+   .content-list-banner .cont_bx p {
+    text-align: center; /* Căn giữa text theo chiều ngang */
+    color: rgb(255, 255, 255);
+    /* Loại bỏ transform */
+  }
+  
+ .offers{
+    width: 80%;
+    height: auto;
+    /* border: 1px solid #000; */
+    margin: auto;
+    margin-top: 30px;
+ }
+ .offers h1{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+ }
+.offers p {
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid #000; */
+    flex-wrap: wrap;
+}
+.offers .cards .card{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    /* border: 1px solid #000; */
+    margin: 10px;
+}
+.offers .cards .card h3{
+    width: 140px;
+    padding: 6px 0px;
+    background: rgb(165 , 243, 165);
+    font-size: 12px;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    border-radius: 20px;
+}
+.offers .cards .card .img_text{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+}
+.offers .cards .card .img_text img{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px 10px 0px 0px;
+}
+.offers .cards .card .img_text h4{
+    position: absolute;
+    font-size: 9px;
+    padding: 10px 15px;
+    bottom: 0;
+    margin: 0;
+    color: #fff;
+    z-index: 2;
+
+ }
+ .offers .cards .card .img_text h4::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(255 , 255. 255, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+ }
+ .offers .cards .card .cont_bx{
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 5px 0px;
+    border-radius: 0px 0px 5px 5px;
+   }
+   .offers .cards .card .cont_bx .price ,.days{
+    margin: 0px 8px;
+   }
+   .offers .cards .card .cont_bx .price .heart_chat{
+    display: flex;
+    align-items: center;
+   }
+   .offers .cards .card .cont_bx .price .heart_chat i:nth-child(1){
+    color: red;
+    font-size: 13px;
+    margin-right: 10px;
+   }
+   .offers .cards .card .cont_bx .price .heart_chat i span{
+    color: #000;
+    font-size: 12px;
+    margin-left: 3px;
+    font-style: normal;
+   }
+   .offers .cards .card .cont_bx .price .heart_chat i:nth-child(2){
+    color: rgb(112, 196, 229);
+    font-size: 13px;
+    margin-right: 10px;
+   }
+   .offers .cards .card .cont_bx .price .info_price{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+   }
+   .offers .cards .card .cont_bx .price .info_price a{
+    text-decoration: none;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.3s linear;
+    margin-right: 13px;
+   }
+   
+    .offers .cards .card .cont_bx .price .info_price a:hover{
+    color: gray;
+   }
+   .offers .cards .card .cont_bx .price .info_price h4{
+    margin: 0;
+    font-size: 13px;
+   }
+   .offers .cards .card .cont_bx .days{
+    color: #fff;
+    background: #000;
+    font-size: 8px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s linear;
+   }
+   .offers .cards .card .cont_bx .days:hover{
+    transform: rotate(360deg);
+   }
+   

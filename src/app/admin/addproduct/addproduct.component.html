@@ -1,0 +1,54 @@
+<div class="recent-orders">
+    <h2>Thêm Tour</h2>
+    <div class="form_update__food">
+        <form action="" method="post" [formGroup]="proAdd" (submit)="onsubmit()">
+            <div class="group_input">
+                <label for="topic-name">Loại Tour</label>
+                <input type="number" placeholder="Nhập id loại tour" formControlName="id_loaitour" name="id_loaitour">
+                <div *ngIf="submited && f.id_loaitour.errors">
+                    <small *ngIf="f.id_loaitour.errors">Id sản phẩm không được bỏ trống</small>
+                </div>
+            </div>
+            <div class="group_input">
+                <label for="Tên Tour">Tên Tour</label><hr>
+                <input type="text" placeholder="Tên tour" formControlName="name" name="TenTour" id="TenTour">
+                <div *ngIf="submited && f.name.errors">
+                    <small *ngIf="f.name.errors">Tên sản phẩm không được bỏ trống</small>
+                </div>
+            </div>
+            <div class="group_input">
+                <label for="Giá">Giá</label><hr>
+                <input type="number" placeholder="Giá" formControlName="price" name="Price" id="Price">
+                <div *ngIf="submited && f.price.errors">
+                    <small *ngIf="f.price.errors"> Giá không được bỏ trống</small>
+                </div>
+            </div>
+            <div class="group_input">
+                <label for="Mota">Khuyến Mãi</label><hr>
+                <input type="number" placeholder="Nhập giá khuyến mãi" formControlName="sale">
+                <div *ngIf="submited && f.sale.errors">
+                    <small *ngIf="f.sale.errors">Giá khuyến mãi không được bỏ trống</small>
+                </div>
+            </div>
+            <div class="group_input">
+                <label for="TourImage">Hình Ảnh</label><hr>
+                <input type="file" placeholder="TourImage" formControlName="img" name="TourImage" id="TourImage">
+                <div *ngIf="submited && f.img.errors">
+                    <small *ngIf="f.img.errors">Hình ảnh không được bỏ trống</small>
+                </div>
+            </div>
+            <div class="group_input">
+                <label for="TourImage">Lịch trình</label><hr>
+                <input type="text" placeholder="Ngày" formControlName="lich_trinh" name="lich_trinh" id="lich_trinh">
+                <div *ngIf="submited && f.lich_trinh.errors">
+                    <small *ngIf="f.lich_trinh.errors">Ngày không được bỏ trống</small>
+                </div>
+            </div>
+
+            <div class="group_btn">
+                <button type="submit" class="btn" name="btnadd">Thêm</button>
+                <button type="reset" class="btn btntp" name="reset">Nhập Lại</button>
+            </div>
+        </form>
+    </div>  
+</div>

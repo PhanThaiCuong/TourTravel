@@ -1,0 +1,332 @@
+<section class="header-content">
+    <div class="content">
+        <div class="cont_bx">
+            <h1> Điểm đến phù hợp cho bạn và gia đình </h1>
+            <p>Khẩu hiệu sáng tạo có khả năng thu hút sự chú ý của khách hàng tiềm năng.</p>
+            <button>Bắt đầu tìm kiếm của bạn </button>
+        </div>
+        <div class="trip_bx">
+            <div class="search_bx">
+                <div class="card">
+                    <h4>Vị trí <i class="bi bi-caret-down-fill"></i></h4>
+                    <input type="text" placeholder="Nhập điểm đến của bạn">
+                </div>
+                <div class="card">
+                    <h4>Ngày <i class="bi bi-caret-down-fill"></i> </h4>
+                    <input type="date">
+                </div>
+                <div class="card">
+                    <h4> Người <i class="bi bi-caret-down-fill"></i></h4>
+                    <input type="number" placeholder="Có bao nhiêu người?">
+                </div>
+                <input type="button" value="Khám phá ngay">
+            </div>
+            <div class="travel_bx">
+                <h4>Các quốc gia nên đi du lịch</h4>
+                <div class="cards">
+                    <div class="card">
+                        <h3>INDIA <img src="assets/image/icon/india.png" alt=""></h3>
+                        <img src="assets/image/Mumbai-India-at-night.jpg" alt="">
+                        <div class="btn_city">
+                            <a href="#">Xem ngay</a>
+                            <h5>Mumbai Central <br> <span>$450</span> </h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>UNITED STATE <img src="assets/image/icon/united-states.png" alt=""></h3>
+                        <img src="assets/image/newyork.webp" alt="">
+                        <div class="btn_city">
+                            <a href="#">Xem ngay</a>
+                            <h5>NewYork <br> <span>$789</span> </h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>RUSIA <img src="assets/image/icon/russia.png" alt=""></h3>
+                        <img src="assets/image/sanpitersburg.jpg" alt="">
+                        <div class="btn_city">
+                            <a href="#">Xem ngay</a>
+                            <h5>sanpitersburg <br> <span>$560</span> </h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>VIETNAM <img src="assets/image/icon/vietnam.jpg" alt=""></h3>
+                        <img src="assets/image/Nha_hat_dien_tu1-1688627017653.jpg" alt="">
+                        <div class="btn_city">
+                            <a href="#">Xem ngay</a>
+                            <h5>Hà Nội <br> <span>$345</span> </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+    <section class="list_product">
+        <div class="offers">
+            <h1>Best tour Package offters for you</h1>
+            <p>choose your next destination</p>
+            <div class="cards">
+                <!-- <div class="card">
+                    <h3>Lotus-Dehli</h3>
+                    <div class="img_text">
+                        <img src="assets/image/lotus_temple.jpg" alt="">
+                        <h4>Inclded: Air ticket, Hotel, Breakfast, Tour, Airport transfer</h4>
+                    </div>
+                    <div class="cont_bx">
+                        <div class="price">
+                            <div class="heart_chat">
+                                <i class="bi bi-heart-fill"><span>86415</span></i>
+                                <i class="bi bi-chat-fill"><span>4586</span></i>
+                            </div>
+                            <div class="info_price">
+                                <a routerLink="/product/:id">Chi tiết</a>
+                                <h4>$2468</h4>
+                            </div>
+                        </div>
+                        <div class="days">5 Days <br> India</div>
+                    </div>
+                </div> -->
+    
+                <div class="card" *ngFor="let s of sanphams ">
+                    <h3>{{s.name}}</h3>
+                    <div class="img_text">
+                        <img [src]="'assets/image/'+ s.img" alt="">
+                        <h4>Inclded: Air ticket, Hotel, Breakfast, Tour, Airport transfer</h4>
+                    </div>
+                    <div class="cont_bx">
+                        <div class="price">
+                            <div class="heart_chat">
+                                <i class="bi bi-heart-fill"><span>86415</span></i>
+                                <i class="bi bi-chat-fill"><span>4586</span></i>
+                            </div>
+                            <div class="info_price">
+                                <a routerLink="/product/{{s.id}}"routerLinkActive='active' ariaCurrentWhenActive="page" >Chi tiết</a>
+                                <h4>{{s.price}} d</h4>
+                            </div>
+                        </div>
+                        <div class="days">{{s.lich_trinh}} <br> Dubai</div>
+                    </div>
+                </div>
+<!--     
+                <div class="card">
+                    <h3>Piramids-Egypt</h3>
+                    <div class="img_text">
+                        <img src="assets/image/piramids.jpg" alt="">
+                        <h4>Inclded: Air ticket, Hotel, Breakfast, Tour, Airport transfer</h4>
+                    </div>
+                    <div class="cont_bx">
+                        <div class="price">
+                            <div class="heart_chat">
+                                <i class="bi bi-heart-fill"><span>86415</span></i>
+                                <i class="bi bi-chat-fill"><span>4586</span></i>
+                            </div>
+                            <div class="info_price">
+                                <a href="detail.html">Chi tiết</a>
+                                <h4>$1268</h4>
+                            </div>
+                        </div>
+                        <div class="days">7 Days <br> Egypt</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Mountain-Vietnam</h3>
+                    <div class="img_text">
+                        <img src="assets/image/mountain.jpg" alt="">
+                        <h4>Inclded: Air ticket, Hotel, Breakfast, Tour, Airport transfer</h4>
+                    </div>
+                    <div class="cont_bx">
+                        <div class="price">
+                            <div class="heart_chat">
+                                <i class="bi bi-heart-fill"><span>86415</span></i>
+                                <i class="bi bi-chat-fill"><span>4586</span></i>
+                            </div>
+                            <div class="info_price">
+                                <a href="detail.html">Chi tiết</a>
+                                <h4>$2468</h4>
+                            </div>
+                        </div>
+                        <div class="days">3 Days <br> VietNam</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="baner">
+        <div class="destination">
+            <div class="des_bx">
+                <h4>Out Destination</h4>
+                <p>Choosse your next Destination</p>
+                <li>India</li>
+                <li>Dubai</li>
+                <li>USA</li>
+                <li>Vietnam</li>
+                <li>Russia</li>
+                <li>Brazil</li>
+                <h6>Included: Air ticket, Hotel, Breakfast, Tours, Airport transfer</h6>
+                <button>MORE INFO</button>
+            </div>
+            <div class="img_bx">
+                <img src="assets/image/Main_plan.png" alt="">
+                <div class="msg">
+                    <img src="assets/image/icon/round_india_flag.png" alt="">
+                    <div class="cont">
+                        <h4>India</h4>
+                        <div class="icon">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg">
+                    <img src="assets/image/icon/vietnam.jpg" alt="">
+                    <div class="cont">
+                        <h4>Vietnam</h4>
+                        <div class="icon">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+    
+        </div>
+    </section>
+    <section class="list_tour">
+        <h2>Điểm đến phổ biến</h2>
+        <div class="list">
+            <div class="grid-item item1">
+                    <div class="grid-item-img main" style="background-image: url(assets/image/list1.jpg);">
+                    <div class="grid-item-img sub">
+                        <div class="info">
+                            <p class="title">Singgapore</p>
+                            <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separate.</p>
+                            <a href="">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item2">
+                <div class="grid-item-img main" style="background-image: url(assets/image/list2.jpg);">
+                    <div class="grid-item-img sub">
+                        <div class="info">
+                            <p class="title">Singgapore</p>
+                            <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separate.</p>
+                            <a href="">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item3">
+                <div class="grid-item-img main" style="background-image: url(assets/image/list3.jpg);">
+                    <div class="grid-item-img sub">
+                        <div class="info">
+                            <p class="title">Singgapore</p>
+                            <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separate.</p>
+                            <a href="">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item4">
+                <div class="grid-item-img main" style="background-image: url(assets/image/list4.jpg);">
+                    <div class="grid-item-img sub">
+                        
+                        <div class="info">
+                            <p class="title">Singgapore</p>
+                            <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separate.</p>
+                            <a href="">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item item5">
+                <div class="grid-item-img main" style="background-image: url(assets/image/list5.jpg);">
+                    <div class="grid-item-img sub">
+                        <div class="info">
+                            <p class="title">Singgapore</p>
+                            <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separate.</p>
+                            <a href="">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class = "banner">
+        <div class="img_tx">
+            <img src="assets/image/thap.jpg" alt="">
+            <h1>Du lịch nổi bật</h1>
+            <p>Ý tưởng du lịch mới của bạn</p>
+            <img class="icon" src="assets/image/icon/icon.png" alt="">
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="title">
+            <h2>Phản hồi khách hàng</h2>
+        </div>
+        <div class="review">
+            <div class="list_review">
+                <div class="review_img">
+                    <img src="assets/image/avatar1.jpg" alt="">
+                    <div class="review_name">
+                        <h3>Test</h3>
+                    </div>
+                </div>
+                <div class="review_content">
+                    <p>" Tôi và gia đình đã có chuyến đi du lịch thật thoải mái và tuyệt vời với dịch vụ Du lich</p>
+                </div>
+                <div class="vote">
+                    <ul>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list_review">
+                <div class="review_img">
+                    <img src="assets/image/avatar1.jpg" alt="">
+                    <div class="review_name">
+                        <h3>Test</h3>
+                    </div>
+                </div>
+                <div class="review_content">
+                    <p>" Tôi và gia đình đã có chuyến đi du lịch thật thoải mái và tuyệt vời với dịch vụ Du lich</p>
+                </div>
+                <div class="vote">
+                    <ul>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list_review">
+                <div class="review_img">
+                    <img src="assets/image/avatar1.jpg" alt="">
+                    <div class="review_name">
+                        <h3>Test</h3>
+                    </div>
+                </div>
+                <div class="review_content">
+                    <p>" Tôi và gia đình đã có chuyến đi du lịch thật thoải mái và tuyệt vời với dịch vụ Du lich</p>
+                </div>
+                <div class="vote">
+                    <ul>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                        <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>

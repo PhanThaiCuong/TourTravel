@@ -1,0 +1,35 @@
+<div class="recent-orders">
+    <h2>Quản Lý </h2>
+    <a routerLink="admin/addproduct" class="addfood">Thêm Tour</a>
+    <table id="table_id" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên tour</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Giảm giá</th>
+                <th scope="col">Lịch Trình</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let pro of products | paginate: { itemsPerPage: 8, currentPage: p } " >
+                    <td>{{pro.id}}</td>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.price}} VND</td>
+                    <td>{{pro.sale}}%</td>
+                    <td>{{pro.lich_trinh}}</td>
+                    <td style="width: 170px;"><img [src]="'assets/image/'+ pro.img"></td>
+                    <td class="unblock">
+                        <a href="./admin/update/{{pro.id}}"routerLinkActive='active' ariaCurrentWhenActive="page" >Sua</a>
+                        <a routerLink="./admin/maindashboard" (click)="onDelete(pro.id)">Xoa</a>
+                    </td>
+                </tr>
+            
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls >
+   
+    <a href="#">Show All</a>
+</div>

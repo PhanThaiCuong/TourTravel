@@ -1,0 +1,24 @@
+
+<div class="containers">
+    <div class="form-container">
+        <h2>Đăng nhập</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="form-login">
+            <div class="input-group">
+                <label for="username">Tên đăng nhập hoặc Email:</label>
+                <input type="text" id="username" name="username" formControlName="username">
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" formControlName="password">
+            </div>
+            <button type="submit" [disabled]="!loginForm.valid">Đăng nhập</button>
+            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+        </form>
+        <div class="social-login">
+            <a href="#" class="facebook"><i class="bi bi-facebook" style="font-size: 20px ;color: #ffffff ;margin-right: 10px" ></i> Tiếp tục với Facebook</a>
+            <a href="#" class="google"> <i class="bi bi-google" style="font-size: 20px ;color: #ffffff ;margin-right: 10px"></i> Tiếp tục với Google</a>
+            <a href="#" class="twitter" >  <i class="bi bi-twitter-x" style="font-size: 20px ;color: #ffffff ;margin-right: 10px"></i>Tiếp tục với Twitter</a>
+        </div>
+        <p>Bạn chưa có tài khoản? <a href="#" class="signup">Tạo tài khoản</a></p>
+    </div>
+</div>

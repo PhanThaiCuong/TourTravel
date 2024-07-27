@@ -1,0 +1,173 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+<div class="container">
+    <!-- Sidebar Section -->
+   
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>Travel<span class="danger">Tour</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a routerLink="./dashboard">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Quản Lý</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3> Quản lý tài Khoản</h3>
+                </a>
+                <a routerLink="./maindashboard">
+                    <span class="material-icons-sharp">
+                        import_contacts
+                    </span>
+                    <h3>Quản lý tour</h3>
+                </a>
+                <a routerLink="./addproduct" >
+                    <span class="material-icons-sharp">
+                        library_add_check
+                    </span>
+                    <h3>Thêm tour</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        construction
+                    </span>
+                    <h3>Sửa tour</h3>
+
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        signal_cellular_alt
+                    </span>
+                    <h3>Thống kê</h3>
+
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Quản lí hóa đơn</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Thêm</h3>
+                </a>
+                <a href="index.php?pg=exit" class="logout">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Thoát</h3>
+                </a>
+            </div>
+
+        </aside>
+    <!-- End of Sidebar Section -->
+    <main>
+        <router-outlet> </router-outlet>
+    </main>
+    <!-- Main Content -->
+    
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <div class="profile">
+                <div class="info">
+                    <p>Chào, <b>Admin</b></p>
+                </div>
+                <div class="profile-photo">
+                    <img src="./assets/image/profile-1.jpg">
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Nav -->
+
+        <div class="user-profile">
+            <div class="logo">
+
+                <h2>Travel tour</h2>
+                <p>58 Thảo Điền, Hồ Chí Minh, VN</p>
+                <p>+84 899384048</p>
+
+            </div>
+        </div>
+
+        <div class="reminders">
+            <div class="header">
+                <h2>Giờ Hoạt Động</h2>
+                <span class="material-icons-sharp">
+                    notifications_none
+                </span>
+            </div>
+
+            <div class="notification">
+                <div class="icon">
+                    <span class="material-icons-sharp">
+                        volume_up
+                    </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Thứ 2 - Thứ 7</h3>
+                        <small class="text_muted">
+                            09:00 AM - 22:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                        more_vert
+                    </span>
+                </div>
+            </div>
+
+            <div class="notification deactive">
+                <div class="icon">
+                    <span class="material-icons-sharp">
+                        edit
+                    </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Chủ Nhật</h3>
+                        <small class="text_muted">
+                            10:00 AM - 23:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                        more_vert
+                    </span>
+                </div>
+            </div>
+
+            <div class="notification add-reminder">
+                <div>
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Thêm Lời Nhắc</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End of Right Section -->
+
+</div>

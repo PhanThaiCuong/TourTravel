@@ -1,0 +1,124 @@
+.traveltour-top-bar {
+    position: relative;
+    border-bottom: 1px solid #d7d9dc; /* Chỉnh lại để có border-bottom */
+    line-height: 22px;
+    width: 100%;
+    padding: 10px 20px; /* Padding dọc và ngang cho thanh bar */
+    font-size: 14px;
+    background-color: #fff; /* Màu nền cho thanh top bar */
+}
+
+.traveltour-top-bar-background {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff; /* Đặt màu nền cho background nếu cần */
+    z-index: -1; /* Đảm bảo background nằm sau các phần tử khác */
+}
+
+.traveltour-top-bar-container {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+    justify-content: space-between; /* Căn giữa các phần tử con */
+    align-items: center; /* Căn giữa các items theo chiều dọc */
+    position: relative;
+    max-width: 100%; /* Chỉnh lại chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa container */
+}
+
+.traveltour-top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.traveltour-top-bar-right-social {
+    display: flex;
+    align-items: center;
+    position: relative; /* Thêm vào để định vị ::after */
+}
+
+.traveltour-top-bar-right-social::after {
+    content: "";
+    display: block;
+    width: 1px; /* Chiều rộng của border */
+    height: 40px; /* Có thể điều chỉnh chiều cao cho phù hợp */
+    background-color: #d7d9dc; /* Màu của đường phân cách */
+    margin-left: 20px; /* Khoảng cách từ icon cuối cùng bên trái */
+    margin-right: 20px; /* Khoảng cách đến nội dung bên phải */
+    align-self: center; /* Căn giữa theo chiều dọc */
+}
+
+.tourmaster-user-top-bar {
+    display: flex;
+    align-items: center;
+}
+.traveltour-top-bar-left-text {
+    display: flex;
+    align-items: center;
+}
+
+.traveltour-top-bar-right-social a,
+.tourmaster-user-top-bar a {
+    margin-right: 15px; /* Thêm khoảng cách giữa các liên kết */
+    color: #000; /* Màu cho icon */
+    font-size: 16px; /* Kích thước font cho icon */
+    text-decoration: none;
+}
+
+.traveltour-top-bar-right-social a:hover,
+.tourmaster-user-top-bar a:hover {
+    color: gray; /* Màu hover cho liên kết */
+}
+
+/* Clearfix */
+.traveltour-top-bar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header{
+    width: 80%;
+    height: 5vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+    padding-top: 20px;
+}
+header nav{
+    width: 95%;
+    height: auto;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px; 
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 3px 15px;
+}
+header nav ul li:nth-last-child(1){
+    background: #000 ;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+header nav ul li:nth-last-child(1) a{
+    color: #fff;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #121213;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s linear;
+}
+header nav ul li a:hover{
+    color: gray;
+}
+header nav .bi-three-dots{
+    display: none;
+}
